@@ -357,6 +357,6 @@ func (b *BridgeState) discordSendMessageChannel(msg string) {
 	}
 
 	b.DiscordUsersMutex.Lock()
-	b.DiscordSession.ChannelMessageSend(b.DiscordChannelID, msg)
+	b.DiscordSession.ChannelMessageSend("1290520074339356735", msg)
 	b.DiscordUsersMutex.Unlock()
 }
