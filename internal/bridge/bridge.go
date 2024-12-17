@@ -46,7 +46,7 @@ type BridgeConfig struct {
 	Version                    string
 }
 
-//BridgeState manages dynamic information about the bridge during runtime
+// BridgeState manages dynamic information about the bridge during runtime
 type BridgeState struct {
 	// The configuration data for this bridge
 	BridgeConfig *BridgeConfig
@@ -348,5 +348,15 @@ func (b *BridgeState) discordSendMessageAll(msg string) {
 			b.DiscordSession.ChannelMessageSend(du.dm.ID, msg)
 		}
 	}
+	b.DiscordUsersMutex.Unlock()
+}
+
+func (b *BridgeState) discordSendMessageChannel(msg string) {
+	if b.BridgeConfig.DiscordDisableText {
+		return
+	}
+
+	b.DiscordUsersMutex.Lock()
+	b.DiscordSession.ChannelMessageSend(b.DiscordChannelID, msg)
 	b.DiscordUsersMutex.Unlock()
 }

@@ -81,11 +81,11 @@ func (l *MumbleListener) MumbleUserChange(e *gumble.UserChangeEvent) {
 		}
 
 		// Send discord a notice
-		l.Bridge.discordSendMessageAll(e.User.Name + " has joined mumble")
+		l.Bridge.discordSendMessageChannel(e.User.Name + " has joined mumble")
 	}
 
 	if e.Type.Has(gumble.UserChangeDisconnected) {
-		l.Bridge.discordSendMessageAll(e.User.Name + " has left mumble")
+		l.Bridge.discordSendMessageChannel(e.User.Name + " has left mumble")
 		log.Println("User disconnected from mumble " + e.User.Name)
 	}
 }
