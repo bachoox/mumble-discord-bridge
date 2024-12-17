@@ -351,9 +351,9 @@ func (b *BridgeState) discordSendMessageAll(msg string) {
 	b.DiscordUsersMutex.Unlock()
 }
 
-/*func (b *BridgeState) discordSendMessageChannel(msg string) {
+func (b *BridgeState) discordSendMessageChannel(msg string) {
 	if b.BridgeConfig.DiscordDisableText {
 		return
 	}
 	b.DiscordSession.ChannelMessageSend(b.BridgeConfig.CID, msg)
-}*/
+}
