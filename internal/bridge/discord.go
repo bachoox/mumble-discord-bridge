@@ -7,10 +7,10 @@ import (
 	"sync"
 	"time"
 
+	"github.com/bachoox/mumble-discord-bridge/pkg/sleepct"
 	"github.com/bwmarrin/discordgo"
 	"github.com/stieneee/gopus"
 	"github.com/stieneee/gumble/gumble"
-	"github.com/bachoox/mumble-discord-bridge/pkg/sleepct"
 )
 
 type fromDiscord struct {
