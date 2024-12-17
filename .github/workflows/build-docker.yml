@@ -42,7 +42,7 @@ jobs:
         uses: docker/metadata-action@v4
         with:
           images: |
-            stieneee/mumble-discord-bridge
+            bachoox/mumble-discord-bridge
             ghcr.io/${{ github.repository }}
           tags: |
             type=semver,pattern={{version}}

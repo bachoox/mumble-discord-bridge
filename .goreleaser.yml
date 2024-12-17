@@ -23,10 +23,10 @@ builds:
 #   - goos: linux
 #     goarch: amd64
 #     image_templates:
-#     - "ghcr.io/stieneee/mumble-discord-bridge:latest"
-#     - "ghcr.io/stieneee/mumble-discord-bridge:{{ .Tag }}"
-#     - "stieneee/mumble-discord-bridge:latest"
-#     - "stieneee/mumble-discord-bridge:{{ .Tag }}"
+#     - "ghcr.io/bachoox/mumble-discord-bridge:latest"
+#     - "ghcr.io/bachoox/mumble-discord-bridge:{{ .Tag }}"
+#     - "bachoox/mumble-discord-bridge:latest"
+#     - "bachoox/mumble-discord-bridge:{{ .Tag }}"
 #     skip_push: "false"
 #     dockerfile: Dockerfile
 #     use: docker

@@ -10,7 +10,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/stieneee/mumble-discord-bridge/pkg/sleepct"
+	"github.com/bachoox/mumble-discord-bridge/pkg/sleepct"
 	"github.com/stieneee/tickerct"
 )
 

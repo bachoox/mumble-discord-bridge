@@ -17,7 +17,7 @@ import (
 	"github.com/joho/godotenv"
 	"github.com/stieneee/gumble/gumble"
 	"github.com/stieneee/gumble/gumbleutil"
-	"github.com/stieneee/mumble-discord-bridge/internal/bridge"
+	"github.com/bachoox/mumble-discord-bridge/internal/bridge"
 )
 
 var (

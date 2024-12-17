@@ -9,7 +9,7 @@ import (
 
 	"github.com/stieneee/gumble/gumble"
 	_ "github.com/stieneee/gumble/opus"
-	"github.com/stieneee/mumble-discord-bridge/pkg/sleepct"
+	"github.com/bachoox/mumble-discord-bridge/pkg/sleepct"
 )
 
 // MumbleDuplex - listener and outgoing

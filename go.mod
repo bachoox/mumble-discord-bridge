@@ -1,4 +1,4 @@
-module github.com/stieneee/mumble-discord-bridge
+module github.com/bachoox/mumble-discord-bridge
 
 go 1.20
 

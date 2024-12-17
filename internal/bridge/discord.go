@@ -10,7 +10,7 @@ import (
 	"github.com/bwmarrin/discordgo"
 	"github.com/stieneee/gopus"
 	"github.com/stieneee/gumble/gumble"
-	"github.com/stieneee/mumble-discord-bridge/pkg/sleepct"
+	"github.com/bachoox/mumble-discord-bridge/pkg/sleepct"
 )
 
 type fromDiscord struct {

@@ -99,7 +99,7 @@ sudo apt install libopus0
 ```
 
 ```bash
-curl -s https://api.github.com/repos/stieneee/mumble-discord-bridge/releases/latest | grep "mumble-discord-bridge" | grep "browser_download_url" | cut -d '"' -f 4 | wget -qi -
+curl -s https://api.github.com/repos/bachoox/mumble-discord-bridge/releases/latest | grep "mumble-discord-bridge" | grep "browser_download_url" | cut -d '"' -f 4 | wget -qi -
 ```
 
 ### Docker
@@ -113,10 +113,10 @@ Replace the environment variables with variable for the desired mumble server, d
 
 ```bash
 # Sample for testing
-docker docker run -e MUMBLE_ADDRESS=example.com -e MUMBLE_PASSWORD=optional -e DISCORD_TOKEN=TOKEN -e DISCORD_GID=GID -e DISCORD_CID=CID stieneee/mumble-discord-bridge
+docker docker run -e MUMBLE_ADDRESS=example.com -e MUMBLE_PASSWORD=optional -e DISCORD_TOKEN=TOKEN -e DISCORD_GID=GID -e DISCORD_CID=CID bachoox/mumble-discord-bridge
 
 # Run as a service
-docker docker run -e MUMBLE_ADDRESS=example.com -e MUMBLE_PASSWORD=optional -e DISCORD_TOKEN=TOKEN -e DISCORD_GID=GID -e DISCORD_CID=CID --restart=always --name=mumble-discord-bridge -d stieneee/mumble-discord-bridge
+docker docker run -e MUMBLE_ADDRESS=example.com -e MUMBLE_PASSWORD=optional -e DISCORD_TOKEN=TOKEN -e DISCORD_GID=GID -e DISCORD_CID=CID --restart=always --name=mumble-discord-bridge -d bachoox/mumble-discord-bridge
 
 # Stop the service
 docker stop mumble-discord-bridge && docker rm mumble-discord-bridge
@@ -173,7 +173,7 @@ goreleaser build --skip-validate --rm-dist --single-target --auto-snapshot
 ### OpenBSD Users
 
 OpenBSD users should consider compiling a custom kernel to use 1000 ticks for the best possible performance.
-See [issue 20](https://github.com/Stieneee/mumble-discord-bridge/issues/20) for the latest discussion about this topic.
+See [issue 20](https://github.com/bachoox/mumble-discord-bridge/issues/20) for the latest discussion about this topic.
 
 ## Jitter Buffer
 

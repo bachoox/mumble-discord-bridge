@@ -26,21 +26,21 @@ test-chart:
 	psrecord --plot docs/test-cpu-memory.png $$(pidof mumble-discord-bridge.test)
 
 docker-latest:
-	docker build -t stieneee/mumble-discord-bridge:latest -t stieneee/mumble-discord-bridge:$(LATEST_TAG) -t ghcr.io/stieneee/mumble-discord-bridge:latest -t ghcr.io/stieneee/mumble-discord-bridge:$(LATEST_TAG) .
+	docker build -t bachoox/mumble-discord-bridge:latest -t bachoox/mumble-discord-bridge:$(LATEST_TAG) -t ghcr.io/bachoox/mumble-discord-bridge:latest -t ghcr.io/bachoox/mumble-discord-bridge:$(LATEST_TAG) .
 
 docker-latest-run:
-	docker run --env-file .env -it stieneee/mumble-discord-bridge:latest
+	docker run --env-file .env -it bachoox/mumble-discord-bridge:latest
 
 docker-release: 
-	docker push stieneee/mumble-discord-bridge:latest
-	docker push stieneee/mumble-discord-bridge:$(LATEST_TAG)
-	docker push ghcr.io/stieneee/mumble-discord-bridge:latest
-	docker push ghcr.io/stieneee/mumble-discord-bridge:$(LATEST_TAG)
+	docker push bachoox/mumble-discord-bridge:latest
+	docker push bachoox/mumble-discord-bridge:$(LATEST_TAG)
+	docker push ghcr.io/bachoox/mumble-discord-bridge:latest
+	docker push ghcr.io/bachoox/mumble-discord-bridge:$(LATEST_TAG)
 
 docker-next:
-	docker build -t stieneee/mumble-discord-bridge:next -t ghcr.io/stieneee/mumble-discord-bridge:next .
-	docker push stieneee/mumble-discord-bridge:next
-	docker push ghcr.io/stieneee/mumble-discord-bridge:next
+	docker build -t bachoox/mumble-discord-bridge:next -t ghcr.io/bachoox/mumble-discord-bridge:next .
+	docker push bachoox/mumble-discord-bridge:next
+	docker push ghcr.io/bachoox/mumble-discord-bridge:next
 
 clean:
 	rm -rf dist
