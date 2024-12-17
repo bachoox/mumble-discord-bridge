@@ -351,12 +351,12 @@ func (b *BridgeState) discordSendMessageAll(msg string) {
 	b.DiscordUsersMutex.Unlock()
 }
 
-func (b *BridgeState) discordSendMessageChannel(msg string) {
+func (b *BridgeState, c *BridgeConfig) discordSendMessageChannel(msg string) {
 	if b.BridgeConfig.DiscordDisableText {
 		return
 	}
 
 	b.DiscordUsersMutex.Lock()
-	b.DiscordSession.ChannelMessageSend("1290520074339356735", msg)
+	b.DiscordSession.ChannelMessageSend(c.CID, msg)
 	b.DiscordUsersMutex.Unlock()
 }
